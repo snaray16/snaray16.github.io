@@ -1,5 +1,5 @@
 # Shreya Narayan
-<img ![IMG_9353](https://github.com/user-attachments/assets/c944cfc6-dad9-4bbb-86a8-22586731a9c1) width = "302" height = "402" >
+![IMG_9353](https://github.com/user-attachments/assets/c944cfc6-dad9-4bbb-86a8-22586731a9c1)
 
 
 # About Me
