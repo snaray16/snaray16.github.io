@@ -1,0 +1,70 @@
+<nav class="navbar">
+  <div class="nav-left">Shreya Narayan</div>
+  <div class="nav-right">
+    <a href="index.html">Home</a>
+    <a href="industry.html">Industry</a>
+    <a href="stanford.html">Stanford Research</a>
+    <a href="jhu.html">Johns Hopkins Research</a>
+    <a href="publications.html">Publications</a>
+    <a href="cv.html">CV</a>
+  </div>
+</nav>
+
+<h1>Stanford Research</h1>
+
+<h2 id="project1">Flexible Ultrasound Array Shape Estimation</h2>
+<p>While at Stanford, I worked on an approach for flexible array shape estimation on a conformal ultrasound array 
+    sensor intended for wearable imaging applications. 
+
+    Wearable imaging has a lot of potential benefits - longitudinal and remote monitoring, for example, 
+    to predict or monitor the progress of health conditions ranging from blood pressure and heart disease to 
+    musculoskeletal strain. 
+
+    The challenge with a conformal/wearable array is that, in contrast to a rigid ultrasound sensor, 
+    as a patient moves, there is resulting uncertainty in the locations of element positions within the 
+    ultrasound array, posing a major challenge for image reconstruction. Because the exact positions of elements 
+    are unknown, the time-of-flight to and from regions in the field of view are unknown, preventing proper 
+    focusing. Rotations of elements also means that transmitted pressure and receive sensitivity fields are 
+    affected. These errors lead to aberrated wavefronts after focusing, resulting in distorted point spread 
+    functions and poor spatial resolution in our ultrasound image. This is a major challenge that must be 
+    overcome in order for wearable or conformal ultrasound devices to be feasible. Specifically, we need to know 
+    where the elements are in the array so that we can apply the right phase-delays for image reconstruction. 
+
+    The video shows a differential delay and sum beamforming approach where positions of elements are iteratively 
+    updated to minimize a loss function. The ‘clever/elegant’ approach I’ll highlight is in the loss function 
+    chosen: By the van Cittert-Zernike theorem for pulse-echo ultrasound, it is known that backscattered signals 
+    from diffuse scatterers should have high coherence between transmit-receiver pairs in the array that share a 
+    common midpoint. Any residual phase shift between two such pairs arises due to inaccuracies in the assumed 
+    beamforming model. Essentially, this theorem gives us a loss function that allows us to maximize coherence on 
+    scatterers, and iteratively approach the true conformal geometry of the array, as you can see in the video. 
+    We used point scatterers to make this visualization clear and not too computationally expensive. I find it 
+    pretty satisfying to watch this iterative process progress towards the correct array shape. 
+</p>
+<img src="images/stanford/flexibleArray.mp4">
+
+<h2 id="project2">Adaptive Waveform in Radar to Prevent Pedestrian Collisions</h2>
+
+<h2 id="project1">Project 1: Flexible Ultrasound Array Shape Estimation</h2>
+<p>
+    Preprocessing
+    K Means clusting 
+    Neural Network 
+
+</p>
+<img src="images/stanford/radarTracking.png">
+
+<h2 id="project1">ML Segmentation for Extraction of Muscle Fiber Masks in B-Mode Ultrasound</h2>
+<p>
+    Problem: 
+    Approach: 
+    Result: 
+</p>
+<img src="images/stanford/muscle_fiber_masks.png">
+
+<h2 id="project1">Identification of ACL and Meniscus Tears in MRIs using a Reduced Feature Space</h2>
+<p>
+    Problem: 
+    Approach: 
+    Result: 
+</p>
+<img src="images/stanford/acl_cam.png">
