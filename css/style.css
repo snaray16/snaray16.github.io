@@ -156,6 +156,7 @@ body {
 .connect-header {
   margin-bottom: 8px;   /* reduces gap below header */
   margin-top: 40px;     /* keeps spacing above section */
+  font-size: 30px;
 }
 
 .connect-header + a {
