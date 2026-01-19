@@ -1,3 +1,12 @@
+
+<head>
+  <meta charset="UTF-8">
+  <title>Page Title</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<!-- NAV -->
 <nav class="navbar">
   <div class="nav-left">Shreya Narayan</div>
   <div class="nav-right">
@@ -6,65 +15,137 @@
     <a href="stanford.html">Stanford Research</a>
     <a href="jhu.html">Johns Hopkins Research</a>
     <a href="publications.html">Publications</a>
-    <a href="cv.html">CV</a>
+    <a
+    href="files/Shreya_Narayan_CV_CURRENT.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+    >
+    CV
+    </a>
   </div>
 </nav>
 
-<h1>Stanford Research</h1>
+<div class="container">
+    <h1>Stanford Research</h1>
+    <p>
+       Research focus in time-of-flight imaging systems and applied ML. 
+    </p>
 
-<h2 id="project1">Flexible Ultrasound Array Shape Estimation</h2>
-<p>While at Stanford, I worked on an approach for flexible array shape estimation on a conformal ultrasound array 
-    sensor intended for wearable imaging applications. 
+    <section class="project-section">
+        <h2 id="project1">Flexible Ultrasound Array Shape Estimation</h2>
+        <div class = "project-row">
+            <div class = "project-text">
+                <p>
+                    While at Stanford, I worked on an approach for flexible array shape estimation on a conformal ultrasound array 
+                    sensor intended for wearable imaging applications. 
+                </p>
+                <p>
+                    Wearable imaging has a lot of potential benefits - longitudinal and remote monitoring, for example, 
+                    to predict or monitor the progress of health conditions ranging from blood pressure and heart disease to 
+                    musculoskeletal strain. 
+                </p>
+                <p>
+                    The challenge with a conformal/wearable array is that, in contrast to a rigid ultrasound sensor, 
+                    as a patient moves, there is resulting uncertainty in the locations of element positions within the 
+                    ultrasound array, posing a major challenge for image reconstruction. Because the exact positions of elements 
+                    are unknown, the time-of-flight to and from regions in the field of view are unknown, preventing proper 
+                    focusing. Rotations of elements also means that transmitted pressure and receive sensitivity fields are 
+                    affected. These errors lead to aberrated wavefronts after focusing, resulting in distorted point spread 
+                    functions and poor spatial resolution in our ultrasound image. This is a major challenge that must be 
+                    overcome in order for wearable or conformal ultrasound devices to be feasible. Specifically, we need to know 
+                    where the elements are in the array so that we can apply the right phase-delays for image reconstruction. 
+                </p>
+                <p>
+                    The video shows a differential delay and sum beamforming approach where positions of elements are iteratively 
+                    updated to minimize a loss function. By the van Cittert-Zernike theorem for pulse-echo ultrasound, it is known that backscattered signals 
+                    from diffuse scatterers should have high coherence between transmit-receiver pairs in the array that share a 
+                    common midpoint. Any residual phase shift between two such pairs arises due to inaccuracies in the assumed 
+                    beamforming model. Essentially, this theorem gives us a loss function that allows us to maximize coherence on 
+                    scatterers, and iteratively approach the true conformal geometry of the array, as you can see in the video. 
+                    We used point scatterers to make this visualization clear and not too computationally expensive. 
+                </p>
+            </div>
 
-    Wearable imaging has a lot of potential benefits - longitudinal and remote monitoring, for example, 
-    to predict or monitor the progress of health conditions ranging from blood pressure and heart disease to 
-    musculoskeletal strain. 
+            <figure class="media-item video-media">
+                <video controls>
+                    <source src="images/stanford/flexibleArray.mp4" type="video/mp4">
+                </video>
+                <figcaption>
+                Iterative differential delay-and-sum beamforming converging to the
+                true conformal array geometry.
+                </figcaption>
+            </figure>
+        </div>
+    </section>
 
-    The challenge with a conformal/wearable array is that, in contrast to a rigid ultrasound sensor, 
-    as a patient moves, there is resulting uncertainty in the locations of element positions within the 
-    ultrasound array, posing a major challenge for image reconstruction. Because the exact positions of elements 
-    are unknown, the time-of-flight to and from regions in the field of view are unknown, preventing proper 
-    focusing. Rotations of elements also means that transmitted pressure and receive sensitivity fields are 
-    affected. These errors lead to aberrated wavefronts after focusing, resulting in distorted point spread 
-    functions and poor spatial resolution in our ultrasound image. This is a major challenge that must be 
-    overcome in order for wearable or conformal ultrasound devices to be feasible. Specifically, we need to know 
-    where the elements are in the array so that we can apply the right phase-delays for image reconstruction. 
 
-    The video shows a differential delay and sum beamforming approach where positions of elements are iteratively 
-    updated to minimize a loss function. The ‘clever/elegant’ approach I’ll highlight is in the loss function 
-    chosen: By the van Cittert-Zernike theorem for pulse-echo ultrasound, it is known that backscattered signals 
-    from diffuse scatterers should have high coherence between transmit-receiver pairs in the array that share a 
-    common midpoint. Any residual phase shift between two such pairs arises due to inaccuracies in the assumed 
-    beamforming model. Essentially, this theorem gives us a loss function that allows us to maximize coherence on 
-    scatterers, and iteratively approach the true conformal geometry of the array, as you can see in the video. 
-    We used point scatterers to make this visualization clear and not too computationally expensive. I find it 
-    pretty satisfying to watch this iterative process progress towards the correct array shape. 
-</p>
-<img src="images/stanford/flexibleArray.mp4">
+    <section>
+        <h2 id="radar-waveform">Adaptive Waveform in Radar to Prevent Pedestrian Collisions</h2>
+        <p>
+            As a member of Amin Arbabian's Lab, I worked on adaptive waveform techniques applied to radar. 
+        </p>
+        <p>
+            The goal of this project was to build a model that can adaptively apply the optimal radar waveform in real time to accurately classify pedestrian gait. 
+            Self driving cars can make use of this capability to ensure that response to pedestrian activity can happen in real time. 
+        </p>
+        <p>
+            I built a tracking algorithm that could identify and track multiple moving targets (pedestrians) in a field of view. 
+            I used both K-Means Clustering and an EKF Clustering algorithm to do so. 
+            
+            The EKF algorithm performed best and had > 90% accuracy. 
+        </p>
 
-<h2 id="project2">Adaptive Waveform in Radar to Prevent Pedestrian Collisions</h2>
 
-<h2 id="project1">Project 1: Flexible Ultrasound Array Shape Estimation</h2>
-<p>
-    Preprocessing
-    K Means clusting 
-    Neural Network 
+        <figure class="image-column image-medium">
+            <img src="images/stanford/radarTracking.png" alt="Radar Waveform Adaptive Tracking">
+            <figcaption>
+            Tracks extracted from two targets using EKF Clustering on radar datapoints. 
+            </figcaption>
+        </figure>
 
-</p>
-<img src="images/stanford/radarTracking.png">
+    </section>
 
-<h2 id="project1">ML Segmentation for Extraction of Muscle Fiber Masks in B-Mode Ultrasound</h2>
-<p>
-    Problem: 
-    Approach: 
-    Result: 
-</p>
-<img src="images/stanford/muscle_fiber_masks.png">
+    <section>
+        <h2 id="muscleSegmentation">ML Segmentation for Extraction of Muscle Fiber Masks in B-Mode Ultrasound</h2>
+        <p>
+        Point of Care ultrasound solutions and wearable ultrasound solutions will require ML techniques to extract features from continuous images. 
+        </p>
+        <p>
+        Approach: VGG16 + U-Net architecture for extraction of muscle fibers from musculoskeletal B-mode data. 
+        </p>
+        <p>
+            Result: Achieved 99% IOU. 
+        </p>
+        <figure class="image-column image-medium">
+            <img src="images/stanford/muscle_fiber_masks.png" alt="Muscle Fiber Masks">
+            <figcaption>
+                Extracted segmentations of Muscle Fiber. 
+            </figcaption>
+        </figure>
+    </section>
 
-<h2 id="project1">Identification of ACL and Meniscus Tears in MRIs using a Reduced Feature Space</h2>
-<p>
-    Problem: 
-    Approach: 
-    Result: 
-</p>
-<img src="images/stanford/acl_cam.png">
+
+
+    <section>
+        <h2 id="KneeMRI">Identification of ACL and Meniscus Tears in MRIs using a Reduced Feature Space</h2>
+        <p>
+            Problem: Training time for classification of ACL and Meniscus tears is expensive. We want a model that trains faster without a loss in accuracy during inference. 
+        </p>
+        <p>
+            Approach: Normally, three types of cross-sectional planes are used for diagnosis of ACL/Meniscus tears (axial, sagittal, coronal). 
+            The hypothesis here was that we could use a subset of these views for prediction of tears without sacrificing classification performance. 
+            MR-Net and AlexNet were used. Class Activation Mapping (CAM) was used to visualize model weights. 
+        </p>
+        <p>
+            Result: Model training time was reduced by 84% using 33% of the training data (axial views) with an insignificant effect on accuracy. 
+            AUROC with just the axial view was 0.943, as opposed to 0.965 with all three views used for model training.  
+        </p>
+        <figure class="image-column image-medium">
+            <img src="images/stanford/acl_cam.png" alt="ACL Tear Cam">
+            <figcaption>
+                Class Activation Mapping on knee MRIs from models trained on reduced feature space for each of the axial/sagittal/coronal views. 
+            </figcaption>
+        </figure>
+    </section>
+
+    </div>

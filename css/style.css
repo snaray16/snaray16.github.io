@@ -30,3 +30,134 @@ body {
   margin: 40px auto;
   padding: 0 20px;
 }
+
+.experience-section {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+}
+
+.experience-section h2 {
+  margin-bottom: 10px;
+}
+
+.experience-section ol {
+  padding-left: 20px;
+}
+
+.experience-section li {
+  margin-bottom: 10px;
+}
+
+.image-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-top: 20px;
+}
+
+.media-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 32px auto;
+  text-align: center
+}
+
+.media-item img {
+  width: 100%;
+  height: 200px;              /* ← forces equal visual size */
+  object-fit: contain;       /* preserves aspect ratio */
+  align-items: center;    
+}
+
+.medium-medium img{
+    max-width: 600px;
+}
+
+.media-small img{
+    max-width: 400px
+}
+
+/* Larger images for Greeneridge */
+.image-row-large .media-item img {
+  height: 400px;
+  width: 800px ;
+}
+.media-item figcaption {
+  margin-top: 8px;
+  font-size: 0.9em;
+  color: #555;
+  text-align: center;
+  max-width: 90%;
+}
+
+/* Column layout for single-image rows */
+.image-column {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+  align-items: center;
+  gap: 32px;
+  margin-top: 24px;
+}
+
+.image-medium img{
+    max-width: 800px;
+    align-items: center;
+    font-size: 0.9em;
+}
+
+.image-small img{
+    max-width: 400px;
+    align-items: center;
+    font-size: 0.9em;
+}
+
+/* Make Greeneridge images wider */
+.image-column-large .media-item img {
+  height: 360px;  
+  max-width: 900px;
+  font-size: 0.9em; 
+}
+
+.project-row {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+  align-items: start;
+  max-width: 1000px;
+  margin: 32px auto;
+}
+
+.project-text p {
+  margin-bottom: 1em;
+  line-height: 1.6;
+}
+
+.video-media video {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+
+@media (max-width: 800px) {
+  .project-row {
+    grid-template-columns: 1fr;
+  }
+
+  .video-media {
+    margin-top: 16px;
+  }
+}
+
+.connect-header {
+  margin-bottom: 8px;   /* reduces gap below header */
+  margin-top: 40px;     /* keeps spacing above section */
+}
+
+.connect-header + a {
+  display: inline-block;
+}

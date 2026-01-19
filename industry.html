@@ -1,3 +1,12 @@
+
+<head>
+  <meta charset="UTF-8">
+  <title>Page Title</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<!-- NAV -->
 <nav class="navbar">
   <div class="nav-left">Shreya Narayan</div>
   <div class="nav-right">
@@ -6,24 +15,109 @@
     <a href="stanford.html">Stanford Research</a>
     <a href="jhu.html">Johns Hopkins Research</a>
     <a href="publications.html">Publications</a>
-    <a href="cv.html">CV</a>
+    <a
+    href="files/Shreya_Narayan_CV_CURRENT.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+    >
+    CV
+    </a>
   </div>
 </nav>
 
 <div class="container">
   <h1>Industry Experience</h1>
 
-  <h2>Greeneridge Sciences</h2>
-  <p>
-    Description of your role, sensor systems, field deployments, etc.
-  </p>
-  <img src="images/industry/greeneridge_sensor.jpg" style="width: 100%; max-width: 600px;">
+  <!-- Greeneridge -->
+  <section class="experience-section">
+    <h2>Greeneridge Sciences Inc., <em> Acoustician</em> </h2>
 
-  <h2>Hubbs SeaWorld Research Institute</h2>
-  <p>
-    Description of work on marine mammal acoustics, deployments, analysis.
-  </p>
-  <video controls width="600">
-    <source src="images/industry/hubbs_demo.mp4" type="video/mp4">
-  </video>
+    <ol>
+      <li>
+        Developed an end-to-end machine learning pipeline for automatic detection, classification, and localization of bowhead whale calls,
+        enabling analysis of 19 continuously deployed sensors over a two-month Arctic deployment. The pipeline involves three stages: 
+        <p>
+            Stage 1: A classifier that extracts whale calls with > 97% accuracy. 
+        </p> 
+        
+        <p>
+            Stage 2: An object detection algorithm with FasterRCNN architecture that boxes whale calls and classifies their type with 95% precision and 84% recall (Figure 1). 
+        </p>
+        <p>
+            Stage 3: A matching algorithm that matches calls across sensors and triangulates the whale call's source to, on average, within 200 meters of the original estimate 
+            obtained from the manual analyst (over a detection range of > 200 square kilometers).
+        </p>
+      </li>
+      <li>
+        Developed a GUI for computation and visualization of underwater
+        sound source bearings, enabling efficient contextualization of
+        acoustic sources during data analysis (Figure 2). 
+      </li>
+      <li>
+        Conducted field work for sensor calibration, testing, and
+        deployment/retrievals in the Arctic Ocean.
+      </li>
+      <li>
+        Analyzed acoustic and environmental data for end-of-study report
+        submitted to client.
+      </li>
+    </ol>
+
+    <div class="image-column image-column-large">
+        <figure class="media-item">
+            <img src="images/industry/Greeneridge_BBox.png" alt="Bowhead call detections">
+            <figcaption>
+            Figure 1: Automatic detection and classification of bowhead whale calls using a
+            FasterRCNN architecture.            
+        </figcaption>
+        </figure>
+
+        <figure class="media-item">
+            <img src="images/industry/azigram.png" alt="Azigram visualization">
+            <figcaption>
+            Figure 2: Azigram showing bearing estimates of underwater acoustic sources.
+            </figcaption>
+        </figure>
+        </div>
+
+  <!-- Hubbs -->
+  <section class="experience-section">
+    <h2>Hubbs SeaWorld Research Institute, <em> Research Associate (Acoustics, ML, Data Science)</em></h2>
+
+    <p>
+      Currently developing supervised and unsupervised machine learning methods for
+      acoustic feature extraction of odontocete vocalizations to demonstrate
+      species-level differences and vocal production learning in beluga whales using
+      data-science and ML visualization techniques (t-SNE, UMAP, Topological
+      Data Analysis, Class Activation Maps).
+    </p>
+
+    <div class="image-row">
+        <figure class="media-item">
+            <img src="images/industry/bottlenoseWhistleEx.png" alt="Bottlenose Whistle Example">
+            <figcaption>
+            An example of an extracted bottlenose whistle. 
+            </figcaption>
+        </figure>
+
+        <figure class="media-item">
+            <img src="images/industry/spinnerWhistleEx.png" alt="Spinner Dolphin Whistle Example">
+            <figcaption>
+            An example of an extracted spinner whistle. 
+            </figcaption>
+        </figure>
+
+        <figure class="media-item">
+            <img src="images/industry/3D-UMAP.png" alt="Spinner Bottlenose Embeddings">
+            <figcaption>
+            3D U-Map visualization of bottlenose and spinner dolphin embeddings, extracted from a ResNet50 Classifier.  
+            </figcaption>
+        </figure>
+
+    
+    
+    </div>
+        </section>
+    </div>
+  </section>
 </div>
