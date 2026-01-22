@@ -79,11 +79,11 @@ body {
     max-width: 400px
 }
 
-/* Larger images for Greeneridge */
+/* Larger images for Greeneridge
 .image-row-large .media-item img {
   height: 400px;
   width: 800px ;
-}
+} */
 .media-item figcaption {
   margin-top: 8px;
   font-size: 0.9em;
@@ -142,20 +142,37 @@ body {
   border-radius: 6px;
 }
 
-
 @media (max-width: 800px) {
   .project-row {
     grid-template-columns: 1fr;
   }
 
-  .video-media {
-    grid-template-columns: 1fr;
-    margin-top: 16px;
+  /* Force text first, video second */
+  .project-text {
+    order: 1;
   }
 
-  .image-column .image-medium {
-    grid-template-columns: 1fr;
-    
+  /* Media column goes below text */
+  .project-media-column {
+    order: 2;
+    margin-top: 24px;
+  }
+  .video-media {
+    order: 2;
+    margin-top: 24px;
+  }
+
+  /* Images full width on phone */
+  .image-column img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Center links nicely */
+  .project-links {
+    margin-top: 16px;
+    text-align: center;
   }
 }
 
