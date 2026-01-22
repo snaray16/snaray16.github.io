@@ -149,7 +149,13 @@ body {
   }
 
   .video-media {
+    grid-template-columns: 1fr;
     margin-top: 16px;
+  }
+
+  .image-column .image-medium {
+    grid-template-columns: 1fr;
+    
   }
 }
 
