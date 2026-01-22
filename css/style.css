@@ -194,6 +194,7 @@ body {
     width: 100%;
     max-width: 100%;
     height: auto;
+    margin-bottom: 0px;
   }
 
   /* Center links nicely */
