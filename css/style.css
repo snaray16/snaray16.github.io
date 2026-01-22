@@ -1,3 +1,10 @@
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -24,32 +31,6 @@ body {
 .navbar a:hover {
   color: #007acc;
 }
-@media (max-width: 800px) {
-
-  .navbar {
-    flex-direction: column;
-    align-items: center;
-    padding: 12px 16px;
-  }
-
-  .nav-left {
-    margin-bottom: 8px;
-    font-weight: 600;
-  }
-
-  .nav-right {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-  }
-
-  .navbar a {
-    margin-left: 0; /* remove desktop spacing */
-    font-size: 0.95rem;
-  }
-}
-
 
 .container {
   max-width: 1000px;
@@ -92,7 +73,7 @@ body {
 
 .media-item img {
   width: 100%;
-  height: 200px;              /* ← forces equal visual size */
+  height: auto;             
   object-fit: contain;       /* preserves aspect ratio */
   align-items: center;    
 }
@@ -121,6 +102,7 @@ body {
 /* Column layout for single-image rows */
 .image-column {
   display: flex;
+  width: 100%;
   flex-direction: column;
   font-size: 0.9rem;
   align-items: center;
@@ -169,6 +151,33 @@ body {
 }
 
 @media (max-width: 800px) {
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 12px 16px;
+  }
+
+  .nav-left {
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+
+  .nav-right {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .navbar a {
+    margin-left: 0; /* remove desktop spacing */
+    font-size: 0.95rem;
+  }
+}
+
+
+@media (max-width: 800px) {
   .project-row {
     display: flex;
     flex-direction: column;
@@ -190,12 +199,22 @@ body {
   }
 
   /* Images full width on phone */
-  .image-column img {
+  /* .image-column img {
     width: 100%;
     max-width: 100%;
     height: auto;
     margin-bottom: 0px;
+  } */
+
+  .image-column img,
+  .image-medium img,
+  .image-small img,
+  .image-column-large img {
+    width: 100%;
+    max-width: 100% !important;
+    height: auto;
   }
+
 
   /* Center links nicely */
   .project-links {
