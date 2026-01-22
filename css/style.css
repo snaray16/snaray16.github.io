@@ -127,6 +127,7 @@ body {
   height: 360px;  
   max-width: 900px;
   font-size: 0.9em; 
+  align-items: center;
 }
 
 .project-row {
@@ -213,6 +214,8 @@ body {
     width: 100%;
     max-width: 100% !important;
     height: auto;
+    align-items: center;
+
   }
 
 
