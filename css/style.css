@@ -125,7 +125,7 @@ body {
   font-size: 0.9rem;
   align-items: center;
   gap: 24px;
-  margin-top: 20px;
+  margin-top: 2px;
 }
 
 .image-medium img{
@@ -190,7 +190,7 @@ body {
   }
 
   /* Images full width on phone */
-  .image-column img {
+  .image-column .image-column-large img {
     width: 100%;
     max-width: 100%;
     height: auto;
