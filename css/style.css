@@ -131,6 +131,14 @@ body {
   align-items: center;
 }
 
+.project-media-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px
+}
+
+
 .project-row {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
@@ -194,6 +202,7 @@ body {
   .project-media-column {
     order: 2;
     margin-top: 24px;
+    
   }
   .video-media {
     order: 2;
