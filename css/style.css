@@ -144,7 +144,8 @@ body {
 
 @media (max-width: 800px) {
   .project-row {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
   }
 
   /* Force text first, video second */
