@@ -190,7 +190,7 @@ body {
   }
 
   /* Images full width on phone */
-  .image-column .image-column-large img {
+  .image-column img {
     width: 100%;
     max-width: 100%;
     height: auto;
