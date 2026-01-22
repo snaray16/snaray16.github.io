@@ -212,10 +212,9 @@ body {
   .image-small img,
   .image-column-large img {
     width: 100%;
-    max-width: 100% !important;
+    max-width: 100%;
     height: auto;
-    align-items: center;
-
+    margin: 0 auto
   }
 
 
