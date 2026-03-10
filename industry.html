@@ -36,13 +36,13 @@
     <ol>
       <li>
         Developed an end-to-end machine learning pipeline for automatic detection, classification, and localization of bowhead whale calls,
-        enabling analysis of 19 continuously deployed sensors over a two-month Arctic deployment. The pipeline involves three stages: 
+        enabling analysis of 19 continuously deployed sensors over a two-month Arctic deployment. The pipeline (Figure 1) involves three stages: 
         <p>
             Stage 1: A classifier that extracts whale calls with > 97% accuracy. 
         </p> 
         
         <p>
-            Stage 2: An object detection algorithm with FasterRCNN architecture that boxes whale calls and classifies their type with 95% precision and 84% recall (Figure 1). 
+            Stage 2: An object detection algorithm with FasterRCNN architecture that boxes whale calls and classifies their type with 95% precision and 84% recall (Figure 2). 
         </p>
         <p>
             Stage 3: A matching algorithm that matches calls across sensors and triangulates the whale call's source to, on average, within 200 meters of the original estimate 
@@ -52,7 +52,7 @@
       <li>
         Developed a GUI for computation and visualization of underwater
         sound source bearings, enabling efficient contextualization of
-        acoustic sources during data analysis (Figure 2, Figure 3). 
+        acoustic sources during data analysis (Figure 3, Figure 4). 
       </li>
       <li>
         Conducted field work for sensor calibration, testing, and
@@ -66,24 +66,32 @@
 
     <div class="image-column image-column-large">
         <figure class="media-item">
+            <img src="images/industry/automatedPipeline.png" alt="ML Pipeline">
+            <figcaption>
+            Figure 1: Automatic pipeline summary for detection, classification, and localization of bowhead whale calls.           
+        </figcaption>
+        </figure>  
+      
+      <figure class="media-item">
             <img src="images/industry/Greeneridge_BBox.png" alt="Bowhead call detections">
             <figcaption>
-            Figure 1: Automatic detection and classification of bowhead whale calls using a
+            Figure 2: Automatic detection and classification of bowhead whale calls using a
             FasterRCNN architecture.            
         </figcaption>
         </figure>
 
+
         <figure class="media-item">
             <img src="images/industry/azigram.png" alt="Azigram visualization">
             <figcaption>
-            Figure 2: Azigram showing bearing estimates of underwater acoustic sources, in this case, bowhead whale calls. 
+            Figure 3: Azigram showing bearing estimates of underwater acoustic sources, in this case, bowhead whale calls. 
             </figcaption>
         </figure>
 
         <figure class="media-item">
             <img src="images/industry/longTermAzigram.png" alt="Long Term Azigram visualization">
             <figcaption>
-            Figure 3: Long Term Azigram Tool: Helpful for finding long term trends in bearing changes, such as 
+            Figure 4: Long Term Azigram Tool: Helpful for finding long term trends in bearing changes, such as 
             changes in the bearing of ambient noise, using precomputed spectral data for reduced visualization latency. 
             </figcaption>
         </figure>
