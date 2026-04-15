@@ -310,6 +310,8 @@ body {
 .dropdown-content {
   display: none;
   position: absolute;
+  top: 100%;        /* ensures it appears below */
+  left: 0;
   background-color: white;
   min-width: 200px;
   box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
