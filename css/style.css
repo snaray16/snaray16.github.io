@@ -161,13 +161,11 @@ body {
 .video-media video {
   width: 100%;
   max-width: 100%;
+  align-items: center;
   height: auto;
   border-radius: 6px;
 }
-video {
-  margin-left: auto;
-  margin-right: auto;
-}
+
 @media (max-width: 800px) {
 
   .navbar {
