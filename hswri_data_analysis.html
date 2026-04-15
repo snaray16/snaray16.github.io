@@ -74,8 +74,8 @@
     <p>DCLDE 2015 Odontocete Dataset</p>
     <p>
         I extracted approximately 1000 whistles from each of the bottlenose, spinner, and noise classes in RavenPro. 
-        Only 50 whistle examples were available for chance (the common dolphin), obtained from a pool at the recovery 
-        institute. Only whistles without overlap were extracted and the  whistle was extracted with minimal space on either 
+        Only 50 whistle examples were available for chance (the common dolphin), obtained from a recovery pool at HSWRI. 
+        Only singular whistles (without overlap with other individuals) were extracted and the whistle was extracted with minimal space on either 
         side of the start and end of the whistle. 
     </p>
 
@@ -83,15 +83,16 @@
     <p>
         I tested various padding techniques to standardize data: 
             <ul>
-                <li>Black Padding: Padding the spectrogram with black pixels to account for whisltes with shofter duration. Maximum 
+                <li>Black Padding: Padding the spectrogram with black pixels to account for whistles with shorter duration. Maximum 
                     spectrogram size was determined by the longest whistle in the dataset (approximately 3 - 4 seconds in length.)
                 </li>
-                <li>Noise Padding: Padding of the spectrogram with noise taken from the same day that the recording of the whistle was taken.</li>
-                <li>No Padding: Duration in the spectrogram was not standardized. Each whistle took the entire spectrogram.</li>
+                <li>Noise Padding: Padding of the spectrogram with noise taken from the same day as the day the recording of the whistle was taken.</li>
+                <li>No Padding: Duration in the spectrogram was not standardized. Each whistle filled the entire spectrogram, and all spectorgrams
+                    were the same image size.</li>
             </ul>
     </p>
     <p>  
-        I then trained a ResNet50 classisifer, pretrained on ImageNet weights. 
+        I then trained a ResNet50 classisifer (pretrained on ImageNet) on these four classes.
     </p>
 
     <h2>Results</h2>
@@ -116,7 +117,7 @@
             <td>0.8159509202453987</td>
             </tr>
             <tr>
-            <td><strong>Final Model</strong></td>
+            <td><strong>No Padding</strong></td>
             <td>0.9023576730039795</td>
             <td>0.9027355623100304</td>
             </tr>
