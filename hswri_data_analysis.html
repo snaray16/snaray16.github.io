@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Whale Call Detection</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="navbar">
+  <div class="nav-left">Shreya Narayan</div>
+  <div class="nav-right">
+    <a href="index.html">Home</a>
+    <a href="industry.html">Industry</a>
+     <!-- DROPDOWN -->
+    <div class="dropdown">
+      <button class="dropbtn">Projects ▾</button>
+      <div class="dropdown-content">
+        <a href="hswri_data_analysis.html">Data Analysis of Odontocete Whistles</a>
+      </div>
+    </div>
+
+    <a href="stanford.html">Stanford Research</a>
+    <a href="jhu.html">Johns Hopkins Research</a>
+    <a href="publications.html">Publications</a>
+    <a
+        href="files/Shreya_Narayan_CV_CURRENT.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        >
+    CV
+    </a>
+  </div>
+</nav>
+
+<div class="container">
+  <h1>Odontocete Whistle Analysis</h1>
+
+  <p>
+    This project, with the Hubbs SeaWorld Research Institute, is focused on understanding acoustic features that differentiate
+    odontocetes, with the aim of quantifying differences between species and understanding changes in vocalizations over time. 
+
+  </p>
+
+  <!-- VIDEO -->
+   <video controls width="700">
+    <source src="images/hswri/class_visual_video_streamlit.mov" type="video/mp4">
+    </video>
+    <figcaption>
+        Interactive U-MAP for visualizing embeddings from a ResNet50 classifier trained to classify bottlenose dolphin, spinner
+        dolphin, an individual common dolphin ('chance'), and noise. 
+    </figcaption>
+
+    <video controls width="700">
+    <source src="images/hswri/correct_incorrect_visual_video_streamlit.mov" type="video/mp4">
+    </video>
+    <figcaption>
+        Interactive U-MAP for visualizing data points that were correctly vs incorrectly classified from the trained classifier.
+        This shows what we expect, which is that the spinner and bottlenose dolphin whistles are misclassified interchangeably. 
+        We see where those misclassifications occur in the 3D embedding space. 
+    </figcaption>
+
+    <video controls width="700">
+    <source src="images/hswri/bottlenose_spinner_vid_streamlit.mov" type="video/mp4">
+    </video>
+    <figcaption>
+        Interactive embedding map focusing only on bottlenose and spinner whistles, as those are the points closest
+        together in space, and the classes of interest in this study. 
+    </figcaption>
+
+    <h2>Dataset</h2>
+    <p>DCLDE 2015 Odontocete Dataset</p>
+    <p>
+        I extracted approximately 1000 whistles from each of the bottlenose, spinner, and noise classes in RavenPro. 
+        Only 50 whistle examples were available for chance (the common dolphin), obtained from a pool at the recovery 
+        institute. Only whistles without overlap were extracted and the  whistle was extracted with minimal space on either 
+        side of the start and end of the whistle. 
+    </p>
+
+    <h2>Approach</h2>
+    <p>
+        I tested various padding techniques to standardize data: 
+            <ul>
+                <li>Black Padding: Padding the spectrogram with black pixels to account for whisltes with shofter duration. Maximum 
+                    spectrogram size was determined by the longest whistle in the dataset (approximately 3 - 4 seconds in length.)
+                </li>
+                <li>Noise Padding: Padding of the spectrogram with noise taken from the same day that the recording of the whistle was taken.</li>
+                <li>No Padding: Duration in the spectrogram was not standardized. Each whistle took the entire spectrogram.</li>
+            </ul>
+    </p>
+    <p>  
+        I then trained a ResNet50 classisifer, pretrained on ImageNet weights. 
+    </p>
+
+    <h2>Results</h2>
+    <p>
+        <table class="results-table">
+        <thead>
+            <tr>
+            <th>Experiment</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td>Black Padding</td>
+            <td>0.7515602163219861</td>
+            <td>0.75</td>
+            </tr>
+            <tr>
+            <td>Noise Padding</td>
+            <td>0.8234279440150393</td>
+            <td>0.8159509202453987</td>
+            </tr>
+            <tr>
+            <td><strong>Final Model</strong></td>
+            <td>0.9023576730039795</td>
+            <td>0.9027355623100304</td>
+            </tr>
+        </tbody>
+        </table>
+        <p style="max-width: 700px;">
+            The final model shows improved performance across all metrics, particularly in recall,
+            indicating better detection of whale calls with fewer missed events.
+        </p>
+    </p>
+    
+    </div>
+
+    </body>
+    </html>
