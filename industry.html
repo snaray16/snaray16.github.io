@@ -65,23 +65,23 @@
             Bearing estimates are obtained by: 
             <ul>
             <li>
-              1. Extracting data from the orthogonal particle motion sensors with outputs proportional to the cosine and sine direction 
+              Extracting data from the orthogonal particle motion sensors with outputs proportional to the cosine and sine direction 
               of the sound source. 
 
             </li>
             
             <li>
-              2. Applying relevant time-gated and band pass filtering around the signal of interest. 
+              Applying relevant time-gated and band pass filtering around the signal of interest. 
 
             </li>
 
             <li>
-              3. Computing mean bearing estimates per DASAR to the sound source, using a Von Mises distribution to identify (x,y)
+              Computing mean bearing estimates per DASAR to the sound source, using a Von Mises distribution to identify (x,y)
               sound source coordinates of maximum statistical likelihood. 
             </li>
 
             <li>
-              4. Final localization estimates are obtained by combining mean bearing estimates from 2 or more DASARs. A 90% uncertainty
+              Final localization estimates are obtained by combining mean bearing estimates from 2 or more DASARs. A 90% uncertainty
               ellipse is then calculated around the estimate. 
 
             </li>
