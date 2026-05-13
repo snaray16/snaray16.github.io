@@ -52,8 +52,9 @@
             Stage 2: An object detection algorithm with FasterRCNN architecture that boxes whale calls and classifies their type with 95% precision and 84% recall (Figure 2). 
         </p>
         <p>
-            Stage 3: A matching algorithm that matches calls across sensors and triangulates the whale call's source to, on average, within 250 meters of the original estimate 
-            obtained from the manual analyst (over a detection range of > 200 square kilometers).
+            Stage 3: A matching algorithm that matches calls across sensors and triangulates the whale call's source to a median of 97 meters from the original estimate 
+            obtained from the manual analyst (over a detection range of > 200 square kilometers). The matching algorithm I developed is based on template matching, a computer
+            vision technique that is essentially the 2D analogue of 1D matched filtering. 
         </p>
       </li>
       <li>
