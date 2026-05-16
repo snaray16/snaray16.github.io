@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Edge Sensing: Real Time Bird Detection and Classification</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="navbar">
+  <div class="nav-left">Shreya Narayan</div>
+  <div class="nav-right">
+    <a href="index.html">Home</a>
+    <a href="industry.html">Industry</a>
+     <!-- DROPDOWN -->
+    <div class="dropdown">
+      <button class="dropbtn">Projects ▾</button>
+      <div class="dropdown-content">
+        <a href="hswri_data_analysis.html">Odontocete Whistle Analysis</a>
+        <a href = "birdnet.html">Edge Sensing: Real-Time Bird Detection and Classification</a>
+      </div>
+    </div>
+
+    <a href="stanford.html">Stanford Research</a>
+    <a href="jhu.html">Johns Hopkins Research</a>
+    <a href="publications.html">Publications</a>
+    <a
+        href="files/Shreya_Narayan_CV_CURRENT.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        >
+    CV
+    </a>
+  </div>
+</nav>
+
+<div class="container">
+  <h1>Edge Sensing: Real-Time Bird Detection and Classification</h1>
+
+  <p>
+    In this project, I built a real-time passive acoustic monitoring system for bird detection and classification at home. 
+  </p>
+
+    <h2>Hardware / Software Setup</h2>
+    <p>
+        <li>
+            Raspberry Pi 4
+        </li>
+        <li>
+            USB Lavalier Microphone (Omnidirectional Condenser)
+        </li>
+        <li>
+            64 GB SD Card (SANDISK 64GB Extreme microSDXC UHS-I Memory Card)
+        </li>
+        <li>
+            Pretrained BirdNET Model / BirdNET Analyzer for bird detection and classification from Cornell. 
+        </li>
+        <figure class="image-column image-small">
+            <img src="images/birdDetection/setup.jpg" alt="Hardware Setup">
+            <figcaption style="text-align: center;">
+                Hardware Setup
+            </figcaption>
+        </figure>
+    </p>
+
+    <h2> Dashboards: Example Outputs</h2>
+    <p>
+        <figure class="image-column image-medium">
+            <img src="images/birdDetection/5_new_species_dashboard.png" alt="Main Board">
+        </figure>
+        <figcaption style="text-align: center;">
+            5 new species detected today. Species are listed, along with when they were detected and 
+            the model's confidence score for each. 
+        </figcaption>
+    </p>
+    <p>
+        <figure class="image-column image-medium">
+            <img src="images/birdDetection/houseFinch.png" alt="finch">
+        </figure>
+        <figcaption style="text-align: center;">
+            Detected House Finch with accompanying spectrogram.  
+        </figcaption>
+    </p>
+
+
+    <h2>Ongoing Work</h2>
+    <p>  
+        <li>
+            Signal Enhancement: Improving detection and classification performance with noise suppression. 
+        </li>
+        <li>
+            Model Compression for efficient inference on the edge 
+            (partnership with <a href = "https://compressmodels.github.io" target="_blank" > moco: Efficient Inference).</a>
+
+        </li>
+    </p>
+
+    </body>
+    </html>
