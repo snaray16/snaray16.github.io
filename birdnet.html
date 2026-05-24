@@ -41,6 +41,7 @@
 
   <p>
     In this project, I built a real-time passive acoustic monitoring system for bird detection and classification at home. 
+    I then used signal processing methods to remove noise from wav files and amplify bird vocalization signals. 
   </p>
 
     <h2>Hardware / Software Setup</h2>
@@ -68,33 +69,107 @@
     <h2> Dashboards: Example Outputs</h2>
     <p>
         <figure class="image-column image-medium">
-            <img src="images/birdDetection/5_new_species_dashboard.png" alt="Main Board">
+            <img src="images/birdDetection/dashboard.png" alt="Main Board">
         </figure>
         <figcaption style="text-align: center;">
-            5 new species detected on this day. Species are listed, along with when they were detected and 
+            2 new species detected on this day. Species are listed, along with when they were detected and 
             the model's confidence score for each. 
         </figcaption>
     </p>
     <p>
         <figure class="image-column image-medium">
             <img src="images/birdDetection/houseFinch.png" alt="finch">
+            <audio controls>
+            <source 
+                src="audio/birdDetection/House_Finch-96-2026-05-19-birdnet-06_02_44.mp3" 
+                type="audio/wav"
+            >
+            Your browser does not support audio playback.
+            </audio>
         </figure>
+        
         <figcaption style="text-align: center;">
-            Detected House Finch with accompanying spectrogram.  
+            Detected House Finch with accompanying spectrogram and wav file.  
         </figcaption>
     </p>
+
+    <h2> Noise Removal and Signal Enhancement Using Signal Processing Techniques </h2>
+
+    <p>
+    I tested frequency domain filtering, spectral subtraction, Wiener Filtering, Median filtering, 
+    noise gating, and frequency dependent gain techniques to remove noise and amplify bird vocalizations. 
+    </p>
+
+    <p>Results are shown below: </p>
+
+    <div class="image-row">
+
+        <!-- BEFORE -->
+        <figure class="media-item">
+
+            <img 
+            src="images/birdDetection/originalSpectrogram.png" 
+            alt="Original Spectrogram, Before Noise Removal And Signal Enhancement"
+            >
+
+            <figcaption>
+            Original spectrogram, before noise removal and signal enhancement. Note the sound of the car
+            moving past the microphone from seconds 4 - 6. 
+            </figcaption>
+
+            <audio controls>
+            <source 
+                src="audio/birdDetection/Annas_Hummingbird-77-2026-05-17-birdnet-17_39_21.mp3" 
+                type="audio/wav"
+            >
+            Your browser does not support audio playback.
+            </audio>
+
+        </figure>
+
+        <!-- AFTER -->
+        <figure class="media-item">
+
+            <img 
+            src="images/birdDetection/Final_Filtered_Specgram.png" 
+            alt="After Noise Removal Spectrogram"
+            >
+
+            <figcaption>
+            Enhanced recording. Background noise and car noise is removed through spectral subtraction. 
+            Frequency dependent gain is used to amplify the bird's vocalization. 
+            </figcaption>
+
+            <audio controls>
+            <source 
+                src="audio/birdDetection/remove_background_noise_final.wav" 
+                type="audio/wav"
+            >
+            Your browser does not support audio playback.
+            </audio>
+
+        </figure>
+        </div>
+
+        <h3> View Full Jupyter Notebook </h3>
+        <p>
+            <a
+            class="notebook-button"
+            href="files/noise_removal.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            >
+            Open Jupyter Notebook
+            </a>
+        </p>
+        
 
 
     <h2>Ongoing Work</h2>
     <p>  
-        <li>
-            Signal Enhancement: Improving detection and classification performance with noise suppression. 
-        </li>
-        <li>
-            Model Compression for efficient inference on the edge 
-            (partnership with <a href = "https://compressmodels.github.io" target="_blank" > moco: Efficient Inference).</a>
+        Model Compression for efficient inference on the edge 
+        (partnership with <a href = "https://compressmodels.github.io" target="_blank" > moco: Efficient Inference).</a>
 
-        </li>
     </p>
 
     </body>
